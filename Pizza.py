@@ -17,6 +17,9 @@ class Pizza:
             precio=self.tamanio*1.5*self.preciobase
         return precio
     
-#p = Pizza('muzza', ['queso', 'jamon'], 8, 'piedra')
+    def __str__(self):
+        return f'Nombre: {self.nombre} \nTamaño: {self.tamanio} \nPrecio: {self.precio} '
+    
+#p = Pizza('muzza', ['queso', 'jamon'], 8, 'piedra', 50)
 
-#print(p.precio)
+#print(p)

@@ -14,5 +14,16 @@ class Pedido:
         return precio
         
     def pedidoListo(self):
-        print(f'Despues de {self.tiempo} minutos el pedido de {len(self.pizzas)} pizzas de {self.cliente.nombre} esta listo')
+        print(f'Despues de {self.tiempo} minutos el pedido de {len(self.pizzas)} pizzas de {self.cliente.getNombre} esta listo')
         print(f'Seran {self.precioTotal}$')
+        
+    def mostrarPedido(self):
+        print('Las pizzas son: ')
+        for i in range(len(self.pizzas)):
+            print(self.pizzas[i]['pizza'])
+            print(f"Cantidad: {self.pizzas[i]['cantidad']}")
+            print('\n')
+        print(f'El cliente es {self.cliente.getNombre()}')
+        print(f'El precio a pagar del pedido es de: {self.precioTotal}')
+        print(f'Y el estara listo en: {self.tiempo} minutos')
+            
